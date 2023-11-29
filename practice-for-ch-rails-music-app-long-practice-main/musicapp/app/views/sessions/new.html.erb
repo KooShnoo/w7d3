@@ -1,5 +1,6 @@
 <p>Login</p>
 <form action="<%= session_url %>" method="POST">
+    <%= csrf_input %>
     <input type="text" name="session[email]" value="<% @user.email %>"> 
     <input type="password" name="session[password]" value=""> 
     <input type="submit" value="Log In">

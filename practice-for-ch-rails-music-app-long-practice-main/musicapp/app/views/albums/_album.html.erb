@@ -1,0 +1,22 @@
+<div id="<%= dom_id album %>">
+  <p>
+    <strong>Band:</strong>
+    <%= Band.find(album.band_id).name %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= album.title %>
+  </p>
+
+  <p>
+    <strong>Year:</strong>
+    <%= album.year %>
+  </p>
+
+  <p>
+    <strong>Live:</strong>
+    <%= album.live %>
+  </p>
+
+</div>

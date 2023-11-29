@@ -1,0 +1,12 @@
+<p>thse are the bands:</p>
+<br>
+<p>jk wi didn;t code it yet XD</p>
+<ul>
+
+    <% Band.all.each do |b| %>
+        <li>
+            <%= b.name %>
+        </li>
+    <% end %>
+</ul>
+ther're <%= Band.count %> band(s)

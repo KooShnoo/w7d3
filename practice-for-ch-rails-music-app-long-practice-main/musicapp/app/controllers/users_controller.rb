@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to :root
+            redirect_to :bands
         else
             redirect_to :new_user
         end
@@ -20,9 +20,9 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find_by(id: params[:id])
-        if @user.save 
-            redirect_to :root
-        else 
+        if @user.save
+            redirect_to :bands
+        else
             redirect_to :edit_user
         end
     end
