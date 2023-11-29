@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <p> Welcome <%= current_user.email %> ! </p>
+      <form action= "<%= session_url %>" method="POST" >
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Sign Out">
+      </form>
+    <% else %>
+      <%= link_to "Sign Up", "/users/new"%>
+       <%= link_to "Log In", "/session/new"%>
+    <% end %>
     <%= yield %>
   </body>
 </html>

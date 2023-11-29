@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/", to: redirect("404.html")
+  resource :session, only: [:create, :new, :destroy]
+  resources :users, only: [:new, :create, :edit, :update]
+
+
 end
